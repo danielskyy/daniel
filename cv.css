@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.body {
+    background-color: #54B7B1 ;
+    color: EED9C4;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color:6DA095;
+    padding: 1rem 3rem;
+    z-index: 1000;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: EED9C4;
+    padding: 0.8rem 2rem;  
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1rem;
+}
+
+.navbar ul li a:active {
+    outline: none; 
+    background-color: transparent; 
+    transform: none; 
+    box-shadow: none; 
+}
+
+.navbar ul li a {
+    color: black;
+    font-size: 1rem; 
+    font-weight: 600;
+    text-decoration:none;
+    padding: 8px 12px; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar-nav li:hover {
+    background-image: linear-gradient(70deg,rgb(81, 217, 255),rgb(194, 109, 251)); 
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgb(14, 14, 15);
+    text-decoration: none;
+    color: azure;
+}
+.home-content {
+    padding: 6rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.home-container h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home-container h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.home-container p {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
+
+.profil {
+    width: 250px;
+    height: 240px;
+    border-radius: 50%;
+    border: 5px solid rgb(250, 228, 186);
+    animation: bordermove 4s ease-in-out infinite;
+  
+}
+@keyframes bordermove {
+    0% {
+        background-image: linear-gradient(50deg, rgb(231, 11, 198), #3b055a);
+    }
+    50% {
+        background-image: linear-gradient(50deg, #0b0c0c, orange);
+    }
+    100% {
+        background-image: linear-gradient(50deg, rgb(14, 166, 227), #e4fc08);
+    }
+}
+
+
+.baris {
+    padding-left: 0;
+    display: flex;  
+    justify-content: space-between; 
+    gap: 20px;  
+}
+
+
+.baris2 {
+    display: flex;  
+    align-items: center; 
+    flex: 10;  
+    font-size: 1.3rem;
+}
+
+li img {
+    width: 200px;  
+    height: 200px;  
+    border-radius: 50%;  
+    margin-right: 200px;  
+}
+
+li p {
+    margin: 0;
+}
+
+section {
+    padding: 2rem;
+    margin-top: 80px; 
+    background-image:linear-gradient(50deg, rgb(48, 196, 255), #8a10e7);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+section h1, section h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.About-us{
+    text-align: center;
+}
+section p {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    padding-left: 10px;
+    font-size: 1.3rem;
+}
+
+.img-softskill{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+footer {
+    background-color: C0B5A9;
+    text-align: center;
+    color: eed9c4;
+    padding: 2rem 0;
+    margin-top: 50px;
+}
+
+footer h2 {
+    font-size: 2rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+    color:black;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top:80px ;
+}
+.setengah {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#data-diri , #riwayatsekolah{
+    max-width: 550px;
+    min-height: 500px;
+    height: auto;
+
+}
+
+/* Mengatasi navbar yang menutupi konten pada perangkat mobile */
+@media (max-width: 768px) {
+    /* Mengatur tinggi padding body untuk memberi ruang bagi navbar */
+    body {
+        padding-top: 100px; /* Sesuaikan dengan tinggi navbar Anda */
+    }
+
+    /* Mengatur padding dan margin pada navbar */
+    header, nav {
+        padding: 1rem;
+        top: 0;
+        z-index: 1000; /* Pastikan navbar tetap di atas konten */
+    }
+
+    /* Menambah padding-top pada home-content untuk menghindari tumpang tindih dengan navbar */
+    .home-content {
+        padding: 6rem 2rem 2rem 2rem; /* Mengurangi padding agar tidak tumpang tindih */
+        margin-top: 100px; /* Menambahkan margin-top yang cukup */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Mengubah menu navbar jadi vertikal */
+        align-items: center; /* Menyusun item navbar di tengah */
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px; /* Menambahkan jarak antar item navbar */
+    }
+
+    .profil {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px; /* Menambahkan jarak antara gambar profil dan konten lainnya */
+    }
+
+    .baris {
+        flex-direction: column; /* Menyusun konten secara vertikal pada perangkat kecil */
+    }
+
+    .baris2 {
+        font-size: 1rem; /* Mengurangi ukuran font untuk teks di bagian baris */
+    }
+
+    section {
+        padding: 1rem;
+        margin-top: 60px; /* Menambahkan margin-top lebih besar untuk section */
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+
+    .setengah {
+        flex-direction: column; /* Menyusun konten setengah secara vertikal */
+        align-items: center; /* Menyusun konten secara terpusat */
+    }
+
+    #data-diri, #riwayatsekolah {
+        max-width: 90%; /* Mengurangi lebar untuk mengoptimalkan tampilan pada layar kecil */
+    }
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: EED9C4;
+    padding: 0.8rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
